@@ -19,7 +19,8 @@
   </div>
   <div class="hero-content">
     <div class="hero-visual">
-      <img src="images/hero-full.webp" alt="Thiago — TG Mídia" class="hero-capa" loading="eager">
+      <img src="images/hero-visual.webp" alt="Thiago — TG Mídia" class="hero-capa" loading="eager">
+      <a href="https://pay.kiwify.com.br/VEnm06J" class="cta-btn hero-cta" target="_blank" rel="noopener">QUERO BLINDAR MINHA AGÊNCIA &nbsp;→</a>
     </div>
     <div class="hero-badge">
       <span class="badge-line"></span>
@@ -42,7 +43,6 @@
         <div><strong>60 clientes</strong><span>ativos</span></div>
       </div>
     </div>
-    <a href="https://pay.kiwify.com.br/VEnm06J" class="cta-btn" target="_blank" rel="noopener">QUERO BLINDAR MINHA AGÊNCIA &nbsp;→</a>
   </div>
 </section>
 
@@ -117,24 +117,19 @@
     <p class="camadas-sub">Um método validado na operação real da TG Mídia para estruturar, entregar com consistência e manter <strong>clientes por mais</strong> tempo.</p>
     <div class="camadas-grid">
       <div class="camada-card">
-        <img src="images/foto-01-cultura.webp" alt="Cultura" loading="lazy">
-        <div class="camada-info"><span class="camada-num">01</span><strong>Cultura</strong><span class="camada-line"></span></div>
+        <img src="images/foto-01-cultura.webp" alt="01 — Cultura" loading="lazy">
       </div>
       <div class="camada-card">
-        <img src="images/foto-02-entrega.webp" alt="Entrega que Vicia" loading="lazy">
-        <div class="camada-info"><span class="camada-num">02</span><strong>Entrega<br>que Vicia</strong><span class="camada-line"></span></div>
+        <img src="images/foto-02-entrega.webp" alt="02 — Entrega que Vicia" loading="lazy">
       </div>
       <div class="camada-card">
-        <img src="images/foto-03-relacionamento.webp" alt="Relacionamento" loading="lazy">
-        <div class="camada-info"><span class="camada-num">03</span><strong>Relacionamento</strong><span class="camada-line"></span></div>
+        <img src="images/foto-03-relacionamento.webp" alt="03 — Relacionamento" loading="lazy">
       </div>
       <div class="camada-card">
-        <img src="images/foto-04-processos.webp" alt="Processos" loading="lazy">
-        <div class="camada-info"><span class="camada-num">04</span><strong>Processos</strong><span class="camada-line"></span></div>
+        <img src="images/foto-04-processos.webp" alt="04 — Processos" loading="lazy">
       </div>
       <div class="camada-card">
-        <img src="images/foto-05-por-dentro.webp" alt="Por Dentro da TG" loading="lazy">
-        <div class="camada-info"><span class="camada-num">05</span><strong>Por Dentro<br>da TG</strong><span class="camada-line"></span></div>
+        <img src="images/foto-05-por-dentro.webp" alt="05 — Por Dentro da TG" loading="lazy">
       </div>
     </div>
   </div>
@@ -262,11 +257,13 @@
     </div>
 
     <div class="garantia">
-      <div class="garantia-numero">
+      <div class="garantia-inner">
         <span class="garantia-7">7</span>
-        <div><strong>DIAS DE</strong><br><strong>GARANTIA</strong></div>
+        <div class="garantia-texto">
+          <strong>DIAS DE</strong>
+          <strong>GARANTIA</strong>
+        </div>
       </div>
-      <p>Você tem 7 dias para conhecer o treinamento, assistir às aulas e avaliar se o Agência Blindada faz sentido para a sua agência.</p>
     </div>
   </div>
 </section>
@@ -316,5 +313,26 @@
   </div>
 </section>
 
+<script>
+// Timeline scroll animations
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.tl-item');
+  if (!items.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('tl-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+
+  items.forEach((item, i) => {
+    item.style.transitionDelay = `${i * 0.08}s`;
+    observer.observe(item);
+  });
+});
+</script>
 </body>
 </html>

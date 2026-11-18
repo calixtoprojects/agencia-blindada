@@ -85,9 +85,17 @@ a { text-decoration: none; color: inherit; }
 
 /* ═══════════════════ SEÇÃO 02 — O MÉTODO ═══════════════════ */
 .metodo {
+  position: relative; overflow: hidden;
   padding: 80px 0; text-align: center;
-  background: linear-gradient(180deg, var(--bg) 0%, #0d0d0d 100%);
 }
+.metodo-bg {
+  position: absolute; inset: 0; z-index: 0;
+}
+.metodo-bg-img {
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: .5;
+}
+.metodo .container { position: relative; z-index: 1; }
 .metodo h2 {
   font-size: clamp(26px, 4vw, 40px); font-weight: 800; line-height: 1.2;
   max-width: 650px; margin: 0 auto 16px;

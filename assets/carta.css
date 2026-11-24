@@ -1,0 +1,383 @@
+/* ===== CARTA DE VENDAS - AGÊNCIA BLINDADA ===== */
+
+:root {
+    --bg: #0a0a0a;
+    --bg-card: #111111;
+    --green: #83e02c;
+    --green-dark: #6bc41f;
+    --white: #ffffff;
+    --gray: #b0b0b0;
+    --gray-light: #d0d0d0;
+    --font: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--gray-light);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 80px 0 60px;
+    background: linear-gradient(180deg, #0f1a08 0%, var(--bg) 100%);
+    border-bottom: 1px solid rgba(131, 224, 44, 0.15);
+}
+
+.hero h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.35;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.hero h1::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 4px;
+    background: var(--green);
+    margin-bottom: 24px;
+    border-radius: 2px;
+}
+
+/* ===== CARTA ===== */
+.carta {
+    padding: 60px 0 80px;
+}
+
+.carta p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    color: var(--gray-light);
+}
+
+.carta p strong {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.carta ul {
+    list-style: none;
+    margin: 24px 0 28px;
+    padding: 0;
+}
+
+.carta ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: var(--gray-light);
+}
+
+.carta ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.carta h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 24px;
+    line-height: 1.35;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.separator {
+    width: 48px;
+    height: 3px;
+    background: var(--green);
+    margin: 48px 0;
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+.destaque {
+    border-left: 3px solid var(--green);
+    padding-left: 20px;
+    color: var(--white) !important;
+    font-weight: 500;
+    font-style: italic;
+    margin: 28px 0;
+}
+
+/* ===== 5 CAMADAS ===== */
+.camadas {
+    margin: 32px 0;
+}
+
+.camada {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    margin-bottom: 12px;
+    background: var(--bg-card);
+    border: 1px solid rgba(131, 224, 44, 0.1);
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.camada:hover {
+    border-color: rgba(131, 224, 44, 0.3);
+}
+
+.camada-numero {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--green);
+    min-width: 32px;
+    line-height: 1.2;
+}
+
+.camada h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.camada p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* ===== STATS ===== */
+.stats {
+    display: flex;
+    gap: 24px;
+    margin: 32px 0;
+    flex-wrap: wrap;
+}
+
+.stat {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    padding: 24px 16px;
+    background: var(--bg-card);
+    border: 1px solid rgba(131, 224, 44, 0.1);
+    border-radius: 8px;
+}
+
+.stat-numero {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+}
+
+/* ===== OFERTA BOX ===== */
+.oferta-box {
+    background: var(--bg-card);
+    border: 1px solid rgba(131, 224, 44, 0.2);
+    border-radius: 12px;
+    padding: 40px 32px;
+    margin: 32px 0;
+    text-align: center;
+}
+
+.oferta-box h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.oferta-box ul {
+    list-style: none;
+    text-align: left;
+    margin: 0 0 32px;
+    padding: 0;
+}
+
+.oferta-box ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: var(--gray-light);
+}
+
+.oferta-box ul li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.preco {
+    margin: 32px 0 24px;
+}
+
+.preco-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.preco-valor {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--green);
+    line-height: 1;
+}
+
+.garantia-texto {
+    font-size: 1rem;
+    color: var(--gray-light);
+    margin-bottom: 8px;
+}
+
+.garantia-detalhe {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 32px;
+}
+
+/* ===== CTA BUTTON ===== */
+.cta-button {
+    display: inline-block;
+    background: var(--green);
+    color: #000;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 16px 40px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    animation: ctaPulse 2.5s ease-in-out infinite;
+}
+
+.cta-button:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(131, 224, 44, 0.3);
+}
+
+@keyframes ctaPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(131, 224, 44, 0.3); }
+    50% { box-shadow: 0 0 20px 4px rgba(131, 224, 44, 0.15); }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+}
+
+.footer-marca {
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 1.35rem;
+    }
+
+    .carta h2 {
+        font-size: 1.2rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .stat {
+        min-width: 100%;
+    }
+
+    .oferta-box {
+        padding: 28px 20px;
+    }
+
+    .preco-valor {
+        font-size: 2.2rem;
+    }
+
+    .cta-button {
+        padding: 14px 28px;
+        font-size: 0.9rem;
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.15rem;
+    }
+
+    .carta p,
+    .carta ul li {
+        font-size: 0.95rem;
+    }
+
+    .carta h2 {
+        font-size: 1.05rem;
+    }
+
+    .camada {
+        padding: 16px;
+    }
+
+    .camada-numero {
+        font-size: 1.3rem;
+    }
+}
